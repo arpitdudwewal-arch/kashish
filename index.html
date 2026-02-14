@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Kashish 💖</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            width: 450px;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+        }
+
+        h1 {
+            color: #e91e63;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #e91e63;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #d81b60;
+            transform: scale(1.07);
+        }
+
+        #celebration {
+            margin-top: 25px;
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #celebration img {
+            width: 220px;
+            margin-top: 15px;
+            border-radius: 15px;
+        }
+
+        .hearts {
+            position: absolute;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+            color: #ff4d6d;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Kashish 💖</h1>
+
+        <p>
+            Some connections feel special… rare… divine.
+        </p>
+
+        <p>
+            If love had a pure form,  
+            I would wish for a bond like Parvati and Shiv —  
+            strong, loyal, eternal.
+        </p>
+
+        <p>
+            So today, with all sincerity and respect…  
+            I want to ask you something.
+        </p>
+
+        <h2>Will you be my forever Valentine? 🌹</h2>
+
+        <button onclick="celebrate()">Yes 💞</button>
+
+        <div id="celebration">
+            <h2>Yaaayyyy!!! 💃❤️</h2>
+            <p>You just made my heart do tandav in happiness 😄💖</p>
+            <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Celebration GIF">
+        </div>
+    </div>
+
+    <script>
+        function celebrate() {
+            document.getElementById("celebration").style.display = "block";
+        }
+
+        // Floating hearts effect
+        setInterval(function() {
+            const heart = document.createElement("div");
+            heart.className = "hearts";
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }, 500);
+    </script>
+
+</body>
+</html>
